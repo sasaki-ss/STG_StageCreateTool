@@ -1,7 +1,11 @@
-#include <iostream>
+#include "System.h"
 
 int main(int argc, char* argv[]) {
-	std::cout << argc << ": Hello My tool Project " << argv[0] << std::endl;
+	System sys;
+
+	if (sys.Init())sys.Run();
+
+	sys.Final();
 
 	return 0;
 }
